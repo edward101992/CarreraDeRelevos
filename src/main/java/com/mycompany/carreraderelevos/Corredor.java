@@ -95,7 +95,7 @@ public class Corredor extends Thread{
         }
     }
     
-        public void avanzaCorredor1(){
+    public void avanzaCorredor1(){
         while (true) {
             int posicion = correr(1);
             if (posicion >= 30) {
@@ -129,14 +129,14 @@ public class Corredor extends Thread{
             if (posicion >= 100) {
                 equipo.setPosicion3(100);
                 if(equipo.getNombreEquipo().equals("Equipo1")){
-                    equipo.setNombreEquipo("Equipo 1");
+                    equipo.setNombreEquipo("Equipo Azul");
                 }else if(equipo.getNombreEquipo().equals("Equipo2")){
-                    equipo.setNombreEquipo("Equipo 2");
+                    equipo.setNombreEquipo("Equipo Rojo");
                 }else if(equipo.getNombreEquipo().equals("Equipo3")){
-                    equipo.setNombreEquipo("Equipo 3");
+                    equipo.setNombreEquipo("Equipo Verde");
                 }
                 String cadena = "El " + equipo.getNombreEquipo()+" Gana la carrera !!!";
-                System.out.println("El equipo ganador es" + equipo.getNombreEquipo());
+                System.out.println("El equipo ganador es  " + equipo.getNombreEquipo());
                 System.exit(0);
                 return cadena;
                 
