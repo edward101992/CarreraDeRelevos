@@ -5,8 +5,6 @@
  */
 package com.mycompany.carreraderelevos;
 
-import java.io.IOException;
-
 /**
  *
  * @author SuperUs
@@ -61,10 +59,9 @@ public class Equipo {
 
 
        
-    public synchronized String imprimirPuesto() throws IOException, InterruptedException{
+    public synchronized String imprimirPuesto(){
         String puesto="";    
-        puesto = "Equipo : " + nombreEquipo;
-        
+        puesto = "Equipo : " + nombreEquipo;       
         for (int i = 0; i <= 100; i++) {
             if (i == posicion1) {
                 puesto += "X!";
@@ -76,9 +73,6 @@ public class Equipo {
                 puesto += "_";
             }
           //  Runtime.getRuntime().exec("cls");
-          //   System.out.print("\033[H\033[2J");  
-         //    System.out.flush(); 
-         //    new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
         } 
         return puesto;
     }
