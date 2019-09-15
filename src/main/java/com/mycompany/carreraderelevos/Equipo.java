@@ -18,7 +18,13 @@ public class Equipo {
 
     public Equipo() {
     }
-
+        
+    public Equipo(String nombreEqui) {
+        this.nombreEquipo = nombreEqui;
+        this.posicion1=0;
+        this.posicion2=30;
+        this.posicion3=60;
+    }
     public String getNombreEquipo() {
         return nombreEquipo;
     }

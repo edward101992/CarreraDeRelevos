@@ -18,7 +18,15 @@ public class Corredor extends Thread{
     private String equipo2;
     private String equipo3;
 
+
     public Corredor() {
+    }
+
+   public Corredor(String nombreEquipo, int posiciondeInicio, int posiciondeLlegada, Equipo equipo ){
+        this.nombreEquipo = nombreEquipo;
+        this.posiciondeInicio = posiciondeInicio;
+        this.posiciondeLlegada = posiciondeLlegada;
+        this.equipo = equipo;
     }
 
     public String getNombreEquipo() {
