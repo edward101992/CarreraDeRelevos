@@ -19,8 +19,7 @@ public class Corredor extends Thread{
     private String equipo3;
 
 
-    public Corredor() {
-    }
+
 
    public Corredor(String nombreEquipo, int posiciondeInicio, int posiciondeLlegada, Equipo equipo ){
         this.nombreEquipo = nombreEquipo;
@@ -137,9 +136,10 @@ public class Corredor extends Thread{
                     equipo.setNombreEquipo("Equipo 3");
                 }
                 String cadena = "El " + equipo.getNombreEquipo()+" Gana la carrera !!!";
-                System.out.println("El " + equipo.getNombreEquipo()+" Gana la carrera !!!");
                 System.out.println("El equipo ganador es" + equipo.getNombreEquipo());
+                System.exit(0);
                 return cadena;
+                
             }
         }
     }
