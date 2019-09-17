@@ -60,20 +60,28 @@ public class Equipo {
 
        
     public synchronized String imprimirPuesto(){
-        String puesto="";    
-        puesto = "Equipo : " + nombreEquipo;       
+        String puesto="";  
+        int contador=0;
+        puesto = "Equipo : " + nombreEquipo;  
+        
         for (int i = 0; i <= 100; i++) {
             if (i == posicion1) {
-                puesto += "X!";
+                puesto += "\033[34m|(*-*)|........";
+                 
             } else if (i == posicion2) {
-                puesto += "O!";
+                puesto += "\033[32m|(°O°)|........";
             } else if (i == posicion3) {
-                puesto += "#!";
+                puesto += "\033[31m|('-')|........";
             } else {
-                puesto += "_";
+                puesto += "_\033[30m";
             }
+           
+           
           //  Runtime.getRuntime().exec("cls");
         } 
+        System.out.println(".");
         return puesto;
+       
     }
+       
 }

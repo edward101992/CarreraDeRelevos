@@ -129,14 +129,14 @@ public class Corredor extends Thread{
             if (posicion >= 100) {
                 equipo.setPosicion3(100);
                 if(equipo.getNombreEquipo().equals("Equipo1")){
-                    equipo.setNombreEquipo("Equipo Azul");
+                    equipo.setNombreEquipo("\033[34mEquipo Azul");
                 }else if(equipo.getNombreEquipo().equals("Equipo2")){
-                    equipo.setNombreEquipo("Equipo Rojo");
+                    equipo.setNombreEquipo("\033[31mEquipo Rojo");
                 }else if(equipo.getNombreEquipo().equals("Equipo3")){
-                    equipo.setNombreEquipo("Equipo Verde");
+                    equipo.setNombreEquipo("\033[32mEquipo Verde");
                 }
                 String cadena = "El " + equipo.getNombreEquipo()+" Gana la carrera !!!";
-                System.out.println("El equipo ganador es  " + equipo.getNombreEquipo());
+                System.out.println("El equipo ganador es \033[35m'-(°-°)¬_>>" + equipo.getNombreEquipo());
                 System.exit(0);
                 return cadena;
                 
