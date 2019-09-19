@@ -5,6 +5,7 @@
  */
 package com.mycompany.carreraderelevos;
 
+
 import static java.lang.System.out;
 
 /**
@@ -61,35 +62,35 @@ public class Equipo {
 
 
        
-    public synchronized String imprimirPuesto() {
+    public synchronized String imprimirPuesto()  {
         String puesto="";  
         int contador=0;
-        puesto = "Equipo : " + nombreEquipo;  
-       
-        for (int i = 0; i <= 100; i++) {
-             //System.out.println("");
-            if (i == posicion1) {
-                puesto += "\033[34m|(*-*)|........";
-               
-            } else if (i == posicion2) {
-                puesto += "\033[32m|(°O°)|........";
-                
-            } else if (i == posicion3) {
-                puesto += "\033[31m|('-')|........";
-                
-            } else {
-                puesto += "_\033[30m";
-                System.out.print("");
-            }
-           
-            
-          //  Runtime.getRuntime().exec("cls");
-        } 
-      
-       
-         System.out.println("\n ");
-        return puesto;
         
-    }
+        puesto = "Equipo : " + nombreEquipo;        
+        for (int i = 0; i <= 100; i++) {
+            
+            if (i == posicion1) {            
+                puesto += "\033[34m|(*-*)|";
+            } else if (i == posicion2) {              
+                puesto += "\033[32m|(°O°)|";  
+            } else if (i == posicion3) {               
+                puesto += "\033[31m|('-')|"; 
+            } else {
+                puesto += "_\033[30m";              
+                
+            }
+          
+        }
+         borrar();
+        return puesto; 
+         
+    }   
+    public void borrar(){
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
        
+    }
 }
+
