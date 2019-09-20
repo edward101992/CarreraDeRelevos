@@ -44,27 +44,45 @@ public class Equipo {
         this.posicion2=30;
         this.posicion3=60;
     }
-    
+    /**
+     * get variable nombreEquipo
+     * @return nombreEquipo
+     */
     public String getNombreEquipo() {
         return nombreEquipo;
     }
-
+    /**
+     * set variable nombreEquipo
+     * @param nombreEquipo 
+     */
     public void setNombreEquipo(String nombreEquipo) {
         this.nombreEquipo = nombreEquipo;
     }
-
+    /**
+     * get variables posicion1
+     * @return posicion1
+     */
     public int getPosicion1() {
         return posicion1;
     }
-
+    /**
+     * set variable posicion1
+     * @param posicion1 
+     */
     public void setPosicion1(int posicion1) {
         this.posicion1 = posicion1;
     }
-
+    /**
+     * get variable posicion2
+     * @return posicion2
+     */
     public int getPosicion2() {
         return posicion2;
     }
-
+    /**
+     * set variable posicion2
+     * @param posicion2 
+     */
     public void setPosicion2(int posicion2) {
         this.posicion2 = posicion2;
     }
