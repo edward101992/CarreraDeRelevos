@@ -9,7 +9,10 @@ package com.mycompany.carreraderelevos;
  * 
  * @author Edward Ramos
  * @author Victor Preciado
- * esta clase hace 
+ * esta clase hace la asignacion de las 
+ * posiciones de los equipos, e imprime
+ * el equipo ganador la sincronizacion de 
+ * los hilos y la notificacion.
  */
 public class Corredor extends Thread{
     Equipo equipo;

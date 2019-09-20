@@ -11,6 +11,10 @@ import static java.lang.System.out;
 /**
  * @author Edward Ramos
  * @author Victor Preciado
+ * en esta clase se sincronizan los hilos
+ * y accede a los nombres del equipo
+ * e impresion de los puestos de los 
+ * equipos.
  */
 public class Equipo {
      /**
