@@ -113,16 +113,9 @@ public class Equipo {
      * equipo.
      */
     public synchronized String imprimirPuesto()  {
-        /**
-         * varible puesto es la encargada de 
-         * imprimir el puesto de los competidores.
-         */
         String puesto="";  
-       
-        
         puesto = "Equipo : " + nombreEquipo;        
-        for (int i = 0; i <= 100; i++) {
-       
+        for (int i = 0; i <= 100; i++) {    
             if (i == posicion1) {            
                 puesto += "\033[34m|(*-*)|";
             } else if (i == posicion2) {              
@@ -135,10 +128,7 @@ public class Equipo {
             }
            
         }
-         
-       // borrar();
         return puesto; 
-         
     }   
 
 }
