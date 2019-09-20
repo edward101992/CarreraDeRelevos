@@ -202,11 +202,8 @@ public class Corredor extends Thread{
                 }else if(equipo.getNombreEquipo().equals("Equipo3")){
                     equipo.setNombreEquipo("°°°Equipo 3°°°");
                 }
-                
-                String cadena = "El " + equipo.getNombreEquipo()+" Gana la carrera !!!";
-                System.out.println("El equipo ganador es \033[39m'-(°-°)¬_>>" + equipo.getNombreEquipo());
+                System.out.println("El equipo ganador es el \033[39m'-(°-°)¬_>>" + equipo.getNombreEquipo());
                 System.exit(0);
-                return cadena;
                 
             }
         }

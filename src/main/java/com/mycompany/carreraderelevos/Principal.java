@@ -13,13 +13,25 @@ package com.mycompany.carreraderelevos;
  */
 
 public class Principal {
-     /**
+     
+    /**
+     * Funcion que simula el movimiento de los corredores
+     */
+    public static void simular(){            
+        System.out.println("\n");
+        System.out.println("\n");
+    }
+    /**
      * este metodo esta encargado de generar un numero 
      * ramdomico para los equipos
+     * @return numero;
      */
     public static int generaNumero(){
+       // simular();
         int numero = (int) (Math.random() * 3) + 1;
+      //  simular();
         return numero;
+        
     }
     
   

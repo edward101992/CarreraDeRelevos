@@ -136,21 +136,10 @@ public class Equipo {
            
         }
          
-        borrar();
+       // borrar();
         return puesto; 
          
     }   
-    /**
-     * este metodo es el encargado de ir
-     * borrando las impresiones de cada
-     * relevo.
-     */
-    public void borrar(){
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-       
-       
-    }
+
 }
 
