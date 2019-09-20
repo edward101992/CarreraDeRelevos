@@ -37,6 +37,7 @@ public class Corredor extends Thread{
         this.equipo = equipo;
     }
 
+
     /**
      * get variable nombreEquipo
      * @return nombreEquipo
@@ -202,8 +203,11 @@ public class Corredor extends Thread{
                 }else if(equipo.getNombreEquipo().equals("Equipo3")){
                     equipo.setNombreEquipo("°°°Equipo 3°°°");
                 }
-                System.out.println("El equipo ganador es el \033[39m'-(°-°)¬_>>" + equipo.getNombreEquipo());
+                
+                String cadena = "El Equipo Ganador es el ";
+                System.out.println(cadena + "\033[39m'-(°-°)¬_>>" + equipo.getNombreEquipo());
                 System.exit(0);
+                return cadena;
                 
             }
         }

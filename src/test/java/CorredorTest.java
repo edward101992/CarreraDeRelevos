@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 
+import com.mycompany.carreraderelevos.Corredor;
+import com.mycompany.carreraderelevos.Principal;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -13,7 +15,8 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author SuperUs
+ * @author Edward Ramos
+ * @author Victor Preciado
  */
 public class CorredorTest {
     
@@ -36,9 +39,20 @@ public class CorredorTest {
     public void tearDown() {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    @Test
+    public void testGeneraNumero() {
+        System.out.println("Metodo generaNumero");
+        int expResult = 1;
+        int expResult1 = 2;
+        int expResult2 = 3;
+        int result = Principal.generaNumero();
+        
+        if(expResult == result || expResult1 == result || expResult2 == result){
+            System.out.println("Test OK");
+        }else{
+            fail("Test FALLO");
+        }
+                    
+    }
+        
 }
