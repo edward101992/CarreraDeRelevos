@@ -109,8 +109,12 @@ public class Equipo {
      * equipo.
      */
     public synchronized String imprimirPuesto()  {
+        /**
+         * varible puesto es la encargada de 
+         * imprimir el puesto de los competidores.
+         */
         String puesto="";  
-        int contador=0;
+       
         
         puesto = "Equipo : " + nombreEquipo;        
         for (int i = 0; i <= 100; i++) {
@@ -132,6 +136,11 @@ public class Equipo {
         return puesto; 
          
     }   
+    /**
+     * este metodo es el encargado de ir
+     * borrando las impresiones de cada
+     * relevo.
+     */
     public void borrar(){
         System.out.println("");
         System.out.println("");
