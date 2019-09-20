@@ -86,17 +86,28 @@ public class Equipo {
     public void setPosicion2(int posicion2) {
         this.posicion2 = posicion2;
     }
-
+    /**
+     * get variable posicion3
+     * @return posicion3
+     */
     public int getPosicion3() {
         return posicion3;
     }
-
+    /**
+     * set variable posicion3
+     * @param posicion3 
+     */
     public void setPosicion3(int posicion3) {
         this.posicion3 = posicion3;
     }
 
 
-       
+    /**
+     * este metodo es el encargado de imprimir 
+     * los puestos de los competidores 
+     * y comprobar la posicion y el nombre del
+     * equipo.
+     */
     public synchronized String imprimirPuesto()  {
         String puesto="";  
         int contador=0;
