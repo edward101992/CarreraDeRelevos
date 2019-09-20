@@ -6,8 +6,10 @@
 package com.mycompany.carreraderelevos;
 
 /**
- *
- * @author SuperUs
+ * 
+ * @author Edward Ramos
+ * @author Victor Preciado
+ * esta clase hace 
  */
 public class Corredor extends Thread{
     Equipo equipo;
@@ -94,10 +96,11 @@ public class Corredor extends Thread{
             esperar();
         }
     }
-    
+   
     public void avanzaCorredor1(){
         while (true) {
             int posicion = correr(1);
+            //analazna la desicion si es ma
             if (posicion >= 30) {
                 equipo.setPosicion1(30);
                 synchronized (equipo) {

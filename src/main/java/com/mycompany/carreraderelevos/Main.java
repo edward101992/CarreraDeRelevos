@@ -6,8 +6,8 @@
 package com.mycompany.carreraderelevos;
 
 /**
- *
- * @author SuperUs
+ * @author Edward Ramos
+ * @author Victor Preciado
  */
 public class Main {
 
@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) {
         Principal principal = new Principal();
         principal.carrera();
-              
+        
         
     }
     

@@ -9,25 +9,42 @@ package com.mycompany.carreraderelevos;
 import static java.lang.System.out;
 
 /**
- *
- * @author SuperUs
+ * @author Edward Ramos
+ * @author Victor Preciado
  */
 public class Equipo {
-    
+     /**
+     * variable nombreEquipo es la encargada de asignar 
+     * el nombre del equipo.
+     * variable posicion1 es la encargada de la posicion
+     * del equipo numero uno del equipo azul.
+     * variable posicion2 es la encargada de la posicion
+     * del equipo numero dos del equipo verde.
+     * variable posicion3 es la encargada de la posicion
+     * del equipo numero tres del equipo rojo.
+     */
     private String nombreEquipo;
     private int posicion1;
     private int posicion2;
     private int posicion3;
-
+    
+    /**
+     * Constructor clase Equipo
+     */
     public Equipo() {
     }
-        
+    /**
+     * Este metodo es el encargado de apuntar o acceder a
+     * los metodos asociados de nombre del equipo 
+     * y las posiciones de los tres equipos.
+     */   
     public Equipo(String nombreEqui) {
         this.nombreEquipo = nombreEqui;
         this.posicion1=0;
         this.posicion2=30;
         this.posicion3=60;
     }
+    
     public String getNombreEquipo() {
         return nombreEquipo;
     }
@@ -68,7 +85,7 @@ public class Equipo {
         
         puesto = "Equipo : " + nombreEquipo;        
         for (int i = 0; i <= 100; i++) {
-            
+       
             if (i == posicion1) {            
                 puesto += "\033[34m|(*-*)|";
             } else if (i == posicion2) {              
@@ -79,9 +96,10 @@ public class Equipo {
                 puesto += "_\033[30m";              
                 
             }
-          
+           
         }
-         borrar();
+         
+        borrar();
         return puesto; 
          
     }   
@@ -89,7 +107,7 @@ public class Equipo {
         System.out.println("");
         System.out.println("");
         System.out.println("");
-        System.out.println("");
+       
        
     }
 }
