@@ -23,9 +23,13 @@ public class Corredor extends Thread{
     private String equipo2;
     private String equipo3;
 
-
-
-
+    /**
+    * este metodo envia las variables por parametro 
+    * @param nombreEquipo nombre del equipo
+    * @param posiciondeInicio posisicion de inicio de la carrera
+    * @param posiciondeLlegada posicion de de llegada de los competidores
+    * @param equipo posicion de los tres equipos
+    */
    public Corredor(String nombreEquipo, int posiciondeInicio, int posiciondeLlegada, Equipo equipo ){
         this.nombreEquipo = nombreEquipo;
         this.posiciondeInicio = posiciondeInicio;
@@ -33,55 +37,97 @@ public class Corredor extends Thread{
         this.equipo = equipo;
     }
 
+    /**
+     * get variable nombreEquipo
+     * @return nombreEquipo
+     */
     public String getNombreEquipo() {
         return nombreEquipo;
     }
-
+    /**
+     * set variable nombreEquipo
+     * @param nombreEquipo 
+     */
     public void setNombreEquipo(String nombreEquipo) {
         this.nombreEquipo = nombreEquipo;
     }
-
+    /**
+     * get variable posiciondeInicio
+     * @return posiciondeInicio
+     */
     public int getPosiciondeInicio() {
         return posiciondeInicio;
     }
-
+    /**
+     * set variable posiciondeInicio
+     * @param posiciondeInicio 
+     */
     public void setPosiciondeInicio(int posiciondeInicio) {
         this.posiciondeInicio = posiciondeInicio;
     }
-
+    /**
+     * get variable posiciondeLlegada
+     * @return posiciondeLlegada
+     */
     public int getPosiciondeLlegada() {
         return posiciondeLlegada;
     }
-
+    /**
+     * set variable posiciondeLlegada
+     * @param posiciondeLlegada 
+     */
     public void setPosiciondeLlegada(int posiciondeLlegada) {
         this.posiciondeLlegada = posiciondeLlegada;
     }
-
+    /**
+     * get variable equipo1
+     * @return equipo1
+     */
     public String getEquipo1() {
         return equipo1;
     }
-
+    /**
+     * set variable equipo1
+     * @param equipo1 
+     */
     public void setEquipo1(String equipo1) {
         this.equipo1 = equipo1;
     }
-
+    /**
+     * get variable equipo2
+     * @return equipo2
+     */
     public String getEquipo2() {
         return equipo2;
     }
-
+    /**
+     * set variable equipo2
+     * @param equipo2 
+     */
     public void setEquipo2(String equipo2) {
         this.equipo2 = equipo2;
     }
-
+    /**
+     * get variable equipo3
+     * @return equipo3
+     */
     public String getEquipo3() {
         return equipo3;
     }
-
+    /**
+     * set variable equipo3
+     * @param equipo3 
+     */
     public void setEquipo3(String equipo3) {
         this.equipo3 = equipo3;
     }
     
-    
+     /**
+     * este metodo es el encargado 
+     * de crear una instancia de Thread 
+     * de los corredores, esperar 
+     * avanzar y esperar de cada equipo.
+     */
     @Override
  
     public void run(){
@@ -99,7 +145,12 @@ public class Corredor extends Thread{
             esperar();
         }
     }
-   
+    /**
+     * este metodo esta encargado de hacer que 
+     * se sincronicen los hilos y ademas de avanzar
+     * y notificarle a los demas su posicion 
+     * y le envia la posicion.
+     */
     public void avanzaCorredor1(){
         while (true) {
             int posicion = correr(1);
@@ -114,7 +165,12 @@ public class Corredor extends Thread{
             }
         }
     }
-        
+     /**
+     * este metodo esta encargado de hacer que 
+     * se sincronicen los hilos y ademas de avanzar
+     * y notificarle a los demas su posicion 
+     * y le envia la posicion.
+     */ 
     public void avanzaCorredor2(){
         while (true) {
             int posicion = correr(2);
@@ -128,7 +184,12 @@ public class Corredor extends Thread{
         }
     }
 
-    
+      /**
+     * este metodo se encarga del avance de los 
+     * equipos y la posicion de cada uno e 
+     * imprimir el equipo que ha ganado la 
+     * carrera.
+     */
     public String avanzaCorredor3(){
         while (true) {
             int posicion = correr(3);
@@ -151,8 +212,12 @@ public class Corredor extends Thread{
         }
     }
     
-    
-
+     /**
+     * este metodo es el encargado de la 
+     * sincronizacion y con el wait el hilo se pondra en 
+     * espera hasta que sea notificado.
+     */
+   
     public void esperar(){       
         synchronized (equipo) {           
             try {
@@ -164,7 +229,15 @@ public class Corredor extends Thread{
         }
     }
     
-
+     /**
+    * este metodo es el encargado de
+    * dar el tiempo a los hilos
+    * la posicion y el numero 
+    * ramdomico y llama al metodo 
+    * para mostrar el equipo
+    * @param corre
+    *  
+    */
     public int correr(int corre) {
         try {
             Thread.sleep(500);
@@ -190,7 +263,11 @@ public class Corredor extends Thread{
         }
         return 0;
     }
-    
+     /**
+     * este metodo muestra el equipo1 
+     * el equipo2 y el equipo3 
+     * y comprueba que no se nulo.
+     */
     public void mostrarEquipo(){
         
         if(equipo.imprimirPuesto().contains("Equipo1")){
